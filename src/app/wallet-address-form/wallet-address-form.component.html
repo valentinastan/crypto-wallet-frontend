@@ -1,0 +1,8 @@
+<form [formGroup]="walletForm" (ngSubmit)="onSubmit()">
+
+  <label for="address">Wallet Address: </label>
+  <input id="address" type="text" formControlName="address">
+
+  <button type="submit" [disabled]="!walletForm.valid">Submit</button>
+</form>
+

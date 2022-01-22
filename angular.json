@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": true
+          "strict": false
         }
       },
       "root": "",
@@ -68,10 +68,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "crypto-wallet-frontend:build:production"
+              "browserTarget": "crypto-wallet-frontend:build:production",
+              "ssl": true
             },
             "development": {
-              "browserTarget": "crypto-wallet-frontend:build:development"
+              "browserTarget": "crypto-wallet-frontend:build:development",
+              "ssl": true
             }
           },
           "defaultConfiguration": "development"
